@@ -28,9 +28,10 @@ static CGFloat animationDuration = 0.4f;
     [UIView animateWithDuration:animationDuration animations:^{
         modalViewController.view.center = sourceViewController.view.center;
     } completion:^(BOOL finished) {
+        [modalViewController.view removeFromSuperview];
         UIModalPresentationStyle prevStyle = navCon.modalPresentationStyle;
         [navCon setModalPresentationStyle:UIModalPresentationCurrentContext];
-        [modalViewController.view removeFromSuperview];
+        [sourceViewController setModalPresentationStyle:UIModalPresentationCurrentContext];
         [sourceViewController presentViewController:modalViewController animated:NO completion:nil];
         [navCon setModalPresentationStyle:prevStyle];
     }];

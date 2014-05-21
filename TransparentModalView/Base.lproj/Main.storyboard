@@ -46,6 +46,18 @@
                     <view key="view" contentMode="scaleToFill" id="1Ue-iq-68C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOe-Ww-LGI">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zJ1-4F-710" kind="custom" customClass="UKCustomModalSegue" id="ZH0-K0-7pz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
@@ -61,6 +73,33 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="924" y="138"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="E7I-5p-x5a">
+            <objects>
+                <viewController id="zJ1-4F-710" customClass="UKModalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bur-qP-QoN"/>
+                        <viewControllerLayoutGuide type="bottom" id="rIy-rb-ZyZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8cg-1P-127">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hQq-es-plu" appends="YES" id="Xrt-B2-heo"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRY-V8-SQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hQq-es-plu">
+                    <connections>
+                        <action selector="viewTapAction:" destination="zJ1-4F-710" id="Jv4-Jj-Lel"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1353" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f3Y-m4-Whz">
