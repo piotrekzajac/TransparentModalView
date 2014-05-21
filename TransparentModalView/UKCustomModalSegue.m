@@ -8,6 +8,8 @@
 
 #import "UKCustomModalSegue.h"
 
+static CGFloat animationDuration = 0.4f;
+
 @implementation UKCustomModalSegue
 
 - (void)perform
@@ -16,10 +18,22 @@
     UIViewController * modalViewController = self.destinationViewController;
     UINavigationController * navCon = sourceViewController.navigationController;
     
-    UIModalPresentationStyle prevStyle = navCon.modalPresentationStyle;
-    [navCon setModalPresentationStyle:UIModalPresentationCurrentContext];
-    [sourceViewController presentViewController:modalViewController animated:NO completion:nil];
-    [navCon setModalPresentationStyle:prevStyle];
+    UIWindow * mainWindow = [[[UIApplication sharedApplication] windows] firstObject];
+
+    [mainWindow addSubview:modalViewController.view];
+    CGPoint modalCenter = modalViewController.view.center;
+    modalCenter.y += [[UIScreen mainScreen] bounds].size.height;
+    modalViewController.view.center = modalCenter;
+    
+    [UIView animateWithDuration:animationDuration animations:^{
+        modalViewController.view.center = sourceViewController.view.center;
+    } completion:^(BOOL finished) {
+        UIModalPresentationStyle prevStyle = navCon.modalPresentationStyle;
+        [navCon setModalPresentationStyle:UIModalPresentationCurrentContext];
+        [modalViewController.view removeFromSuperview];
+        [sourceViewController presentViewController:modalViewController animated:NO completion:nil];
+        [navCon setModalPresentationStyle:prevStyle];
+    }];
 }
 
 @end
