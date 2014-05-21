@@ -17,13 +17,23 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2v-1X-pEd">
-                                <rect key="frame" x="100" y="269" width="121" height="30"/>
+                                <rect key="frame" x="100" y="186" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Show modal view">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="xMq-t4-QkB" kind="custom" identifier="modalView" customClass="UKCustomModalSegue" id="1dD-X1-uUu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e82-FJ-dhg">
+                                <rect key="frame" x="100" y="363" width="121" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show modal view">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fDX-Of-0ME" kind="modal" id="IwH-IL-eRT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,9 +58,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOe-Ww-LGI">
-                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <rect key="frame" x="69" y="269" width="183" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Show another modal view">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -72,7 +82,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="924" y="138"/>
+            <point key="canvasLocation" x="1015" y="-324"/>
         </scene>
         <!--Modal View Controller-->
         <scene sceneID="E7I-5p-x5a">
@@ -99,7 +109,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1353" y="138"/>
+            <point key="canvasLocation" x="1444" y="-324"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f3Y-m4-Whz">
@@ -118,6 +128,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zgH-Aq-YVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3" y="138"/>
+        </scene>
+        <!--Modal Transitioning View Controller-->
+        <scene sceneID="Omc-GS-kEK">
+            <objects>
+                <viewController id="fDX-Of-0ME" customClass="UKModalTransitioningViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aGG-ue-Fa8"/>
+                        <viewControllerLayoutGuide type="bottom" id="qug-MR-x8G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hf5-x4-7qW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqO-JU-ueQ">
+                                <rect key="frame" x="69" y="269" width="183" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show another modal view">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="car-h2-l0w" kind="modal" customClass="UKCustomModalSegue" id="kb5-g7-k70"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="iWp-31-Q2Z" appends="YES" id="Zwj-50-xd2"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKn-jD-hPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="iWp-31-Q2Z">
+                    <connections>
+                        <action selector="viewTapAction:" destination="fDX-Of-0ME" id="mXn-4U-8DX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1015" y="471"/>
+        </scene>
+        <!--Modal Transitioning View Controller-->
+        <scene sceneID="Ygc-1c-1mE">
+            <objects>
+                <viewController id="car-h2-l0w" customClass="UKModalTransitioningViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tOV-xU-ywE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oe0-nX-gCP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JkS-Zs-ib5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LZX-al-RhH" appends="YES" id="flS-iT-5jg"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giL-f3-TJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LZX-al-RhH">
+                    <connections>
+                        <action selector="viewTapAction:" destination="car-h2-l0w" id="SVg-KO-JLZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1444" y="471"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

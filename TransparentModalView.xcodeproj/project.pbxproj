@@ -23,6 +23,8 @@
 		08DB0D0D192CAFA0005CFE13 /* TransparentModalViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB0D0C192CAFA0005CFE13 /* TransparentModalViewTests.m */; };
 		08DB0D19192CB23B005CFE13 /* UKCustomModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB0D18192CB23B005CFE13 /* UKCustomModalSegue.m */; };
 		08DB0D1C192CBECA005CFE13 /* UKModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB0D1B192CBECA005CFE13 /* UKModalViewController.m */; };
+		08DB0D20192CC8C0005CFE13 /* UKModalTransitioningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB0D1F192CC8C0005CFE13 /* UKModalTransitioningViewController.m */; };
+		08DB0D24192CC8FE005CFE13 /* UKModalTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB0D23192CC8FE005CFE13 /* UKModalTransitioningDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		08DB0D18192CB23B005CFE13 /* UKCustomModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKCustomModalSegue.m; sourceTree = "<group>"; };
 		08DB0D1A192CBECA005CFE13 /* UKModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKModalViewController.h; sourceTree = "<group>"; };
 		08DB0D1B192CBECA005CFE13 /* UKModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKModalViewController.m; sourceTree = "<group>"; };
+		08DB0D1E192CC8C0005CFE13 /* UKModalTransitioningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKModalTransitioningViewController.h; sourceTree = "<group>"; };
+		08DB0D1F192CC8C0005CFE13 /* UKModalTransitioningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKModalTransitioningViewController.m; sourceTree = "<group>"; };
+		08DB0D22192CC8FE005CFE13 /* UKModalTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKModalTransitioningDelegate.h; sourceTree = "<group>"; };
+		08DB0D23192CC8FE005CFE13 /* UKModalTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKModalTransitioningDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 		08DB0CE7192CAF9F005CFE13 /* TransparentModalView */ = {
 			isa = PBXGroup;
 			children = (
+				08DB0D21192CC8E5005CFE13 /* Utilities */,
 				08DB0D16192CB219005CFE13 /* Segue */,
 				08DB0D1D192CC073005CFE13 /* View Controllers */,
 				08DB0CF3192CAF9F005CFE13 /* Main.storyboard */,
@@ -174,8 +181,19 @@
 				08DB0CF7192CAF9F005CFE13 /* UKViewController.m */,
 				08DB0D1A192CBECA005CFE13 /* UKModalViewController.h */,
 				08DB0D1B192CBECA005CFE13 /* UKModalViewController.m */,
+				08DB0D1E192CC8C0005CFE13 /* UKModalTransitioningViewController.h */,
+				08DB0D1F192CC8C0005CFE13 /* UKModalTransitioningViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		08DB0D21192CC8E5005CFE13 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				08DB0D22192CC8FE005CFE13 /* UKModalTransitioningDelegate.h */,
+				08DB0D23192CC8FE005CFE13 /* UKModalTransitioningDelegate.m */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DB0D20192CC8C0005CFE13 /* UKModalTransitioningViewController.m in Sources */,
 				08DB0D19192CB23B005CFE13 /* UKCustomModalSegue.m in Sources */,
 				08DB0CF2192CAF9F005CFE13 /* UKAppDelegate.m in Sources */,
 				08DB0D1C192CBECA005CFE13 /* UKModalViewController.m in Sources */,
+				08DB0D24192CC8FE005CFE13 /* UKModalTransitioningDelegate.m in Sources */,
 				08DB0CEE192CAF9F005CFE13 /* main.m in Sources */,
 				08DB0CF8192CAF9F005CFE13 /* UKViewController.m in Sources */,
 			);
