@@ -21,6 +21,8 @@
 		08DB0D03192CAFA0005CFE13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08DB0CE5192CAF9F005CFE13 /* UIKit.framework */; };
 		08DB0D0B192CAFA0005CFE13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08DB0D09192CAFA0005CFE13 /* InfoPlist.strings */; };
 		08DB0D0D192CAFA0005CFE13 /* TransparentModalViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB0D0C192CAFA0005CFE13 /* TransparentModalViewTests.m */; };
+		08DB0D19192CB23B005CFE13 /* UKCustomModalSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB0D18192CB23B005CFE13 /* UKCustomModalSegue.m */; };
+		08DB0D1C192CBECA005CFE13 /* UKModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DB0D1B192CBECA005CFE13 /* UKModalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		08DB0D08192CAFA0005CFE13 /* TransparentModalViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TransparentModalViewTests-Info.plist"; sourceTree = "<group>"; };
 		08DB0D0A192CAFA0005CFE13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08DB0D0C192CAFA0005CFE13 /* TransparentModalViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransparentModalViewTests.m; sourceTree = "<group>"; };
+		08DB0D17192CB23B005CFE13 /* UKCustomModalSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKCustomModalSegue.h; sourceTree = "<group>"; };
+		08DB0D18192CB23B005CFE13 /* UKCustomModalSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKCustomModalSegue.m; sourceTree = "<group>"; };
+		08DB0D1A192CBECA005CFE13 /* UKModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKModalViewController.h; sourceTree = "<group>"; };
+		08DB0D1B192CBECA005CFE13 /* UKModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKModalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +118,9 @@
 		08DB0CE7192CAF9F005CFE13 /* TransparentModalView */ = {
 			isa = PBXGroup;
 			children = (
-				08DB0CF0192CAF9F005CFE13 /* UKAppDelegate.h */,
-				08DB0CF1192CAF9F005CFE13 /* UKAppDelegate.m */,
+				08DB0D16192CB219005CFE13 /* Segue */,
+				08DB0D1D192CC073005CFE13 /* View Controllers */,
 				08DB0CF3192CAF9F005CFE13 /* Main.storyboard */,
-				08DB0CF6192CAF9F005CFE13 /* UKViewController.h */,
-				08DB0CF7192CAF9F005CFE13 /* UKViewController.m */,
 				08DB0CF9192CAF9F005CFE13 /* Images.xcassets */,
 				08DB0CE8192CAF9F005CFE13 /* Supporting Files */,
 			);
@@ -126,6 +130,8 @@
 		08DB0CE8192CAF9F005CFE13 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				08DB0CF0192CAF9F005CFE13 /* UKAppDelegate.h */,
+				08DB0CF1192CAF9F005CFE13 /* UKAppDelegate.m */,
 				08DB0CE9192CAF9F005CFE13 /* TransparentModalView-Info.plist */,
 				08DB0CEA192CAF9F005CFE13 /* InfoPlist.strings */,
 				08DB0CED192CAF9F005CFE13 /* main.m */,
@@ -150,6 +156,26 @@
 				08DB0D09192CAFA0005CFE13 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08DB0D16192CB219005CFE13 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				08DB0D17192CB23B005CFE13 /* UKCustomModalSegue.h */,
+				08DB0D18192CB23B005CFE13 /* UKCustomModalSegue.m */,
+			);
+			name = Segue;
+			sourceTree = "<group>";
+		};
+		08DB0D1D192CC073005CFE13 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08DB0CF6192CAF9F005CFE13 /* UKViewController.h */,
+				08DB0CF7192CAF9F005CFE13 /* UKViewController.m */,
+				08DB0D1A192CBECA005CFE13 /* UKModalViewController.h */,
+				08DB0D1B192CBECA005CFE13 /* UKModalViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08DB0D19192CB23B005CFE13 /* UKCustomModalSegue.m in Sources */,
 				08DB0CF2192CAF9F005CFE13 /* UKAppDelegate.m in Sources */,
+				08DB0D1C192CBECA005CFE13 /* UKModalViewController.m in Sources */,
 				08DB0CEE192CAF9F005CFE13 /* main.m in Sources */,
 				08DB0CF8192CAF9F005CFE13 /* UKViewController.m in Sources */,
 			);
