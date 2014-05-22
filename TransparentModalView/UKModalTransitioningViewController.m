@@ -21,8 +21,7 @@
     self = [super init];
     if (self)
     {
-        self.modalPresentationStyle = UIModalPresentationCustom;
-        self.modalTransitioningDelegate = [[UKModalTransitioningDelegate alloc] init];
+        [self setup];
     }
     return self;
 }
@@ -32,10 +31,15 @@
     self = [super initWithCoder:aDecoder];
     if (self)
     {
-        self.modalPresentationStyle = UIModalPresentationCustom;
-        self.modalTransitioningDelegate = [[UKModalTransitioningDelegate alloc] init];
+        [self setup];
     }
     return self;
+}
+
+- (void)setup
+{
+    self.modalPresentationStyle = UIModalPresentationCustom;
+    self.modalTransitioningDelegate = [[UKModalTransitioningDelegate alloc] init];
 }
 
 #pragma mark - Custom accessors

@@ -20,7 +20,8 @@ static NSTimeInterval animationDuration = 0.4f;
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
-- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                   presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
     self.presenting = YES;
     return self;

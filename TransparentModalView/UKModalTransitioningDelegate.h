@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UKModalTransitioningDelegate : NSObject <UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning>
+@interface UKModalTransitioningDelegate : NSObject <UIViewControllerTransitioningDelegate,
+                                                    UIViewControllerAnimatedTransitioning>
 
 @end
